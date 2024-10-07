@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirt Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>T-Shirt Order Form</h1>
+        </header>
+
+        <!-- T-Shirt Design Options -->
+        <section class="design-options">
+            <h2>Design Your T-Shirt</h2>
+            <form id="orderForm" class="order-form">
+                <div class="form-group">
+                    <label for="color">T-Shirt Color:</label>
+                    <select id="color" name="color" required>
+                        <option value="" disabled selected>Select a color</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="size">T-Shirt Size:</label>
+                    <select id="size" name="size" required>
+                        <option value="" disabled selected>Select a size</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="xlarge">Extra Large</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile No:</label>
+                    <input type="text" id="mobile" name="mobile" placeholder="Enter 10-digit mobile number" maxlength="10" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message on T-Shirt:</label>
+                    <textarea id="message" name="message" placeholder="Enter your message (max 100 characters)" maxlength="100" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Submit Order</button>
+            </form>
+        </section>
+
+        <!-- Price Calculator -->
+        <section class="price-calculator">
+            <h2>Price Calculator</h2>
+            <p id="price">Price: Rs 0.00</p>
+        </section>
+
+        <!-- Order Summary -->
+        <section class="order-summary hidden">
+            <h2>Order Summary</h2>
+            <p id="orderDetails"></p>
+        </section>
+
+        <!-- Product Details -->
+        <section class="product-details">
+            <div id="receipt" class="receipt hidden">
+                <h2>Order Receipt</h2>
+                <p id="receiptDate"></p>
+                <p id="receiptDetails"></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
